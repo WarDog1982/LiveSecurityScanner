@@ -1,0 +1,47 @@
+import '@servicenow/sdk/global'
+import { Table, StringColumn, DateTimeColumn, ChoiceColumn, ReferenceColumn } from '@servicenow/sdk/core'
+
+export const x_138679_livesecur_scan_job = Table({
+    name: 'x_138679_livesecur_scan_job',
+    label: 'Scan Job',
+    schema: {
+        scheduled_by: ReferenceColumn({
+            label: 'Scheduled By',
+            referenceTable: 'sys_user',
+            mandatory: true
+        }),
+        started_at: DateTimeColumn({ 
+            label: 'Started At'
+        }),
+        finished_at: DateTimeColumn({ 
+            label: 'Finished At'
+        }),
+        job_status: ChoiceColumn({
+            label: 'Job Status',
+            mandatory: true,
+            choices: {
+                queued: { label: 'Queued', sequence: 0 },
+                running: { label: 'Running', sequence: 1 },
+                success: { label: 'Success', sequence: 2 },
+                partial: { label: 'Partial', sequence: 3 },
+                failed: { label: 'Failed', sequence: 4 }
+            },
+            dropdown: 'dropdown_with_none',
+            default: 'queued'
+        }),
+        summary: StringColumn({ 
+            label: 'Summary', 
+            maxLength: 1000
+        })
+    },
+    display: 'job_status',
+    accessible_from: 'public',
+    caller_access: 'tracking',
+    actions: ['create', 'read', 'update', 'delete'],
+    allow_web_service_access: true,
+    audit: true,
+    index: [
+        { name: 'idx_job_status', element: 'job_status', unique: false },
+        { name: 'idx_started_at', element: 'started_at', unique: false }
+    ]
+})

@@ -1,0 +1,6 @@
+{
+  "scope": "x_138679_livesecur",
+  "scopeId": "9f8cce444755b2109669565a516d43cf",
+  "name": "Livesecurity",
+  "tsconfigPath": "./src/server/tsconfig.json"
+}
