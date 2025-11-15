@@ -73,7 +73,7 @@ export const x_138679_livesecur_finding = Table({
     display: 'instance_artifact',
     accessibleFrom: 'public',
     callerAccess: 'tracking',
-    actions: ['read', 'update', 'create'],
+    actions: ['read', 'update', 'delete', 'create'],
     allowWebServiceAccess: true,
     audit: true,
     index: [
@@ -86,7 +86,7 @@ export const x_138679_livesecur_finding = Table({
             element: 'advisory_ref',
         },
     ],
-    allowClientScripts: true,
-    allowNewFields: true,
-    allowUiActions: true,
+    allowClientScripts: false,
+    allowNewFields: false,
+    allowUiActions: false,
 })

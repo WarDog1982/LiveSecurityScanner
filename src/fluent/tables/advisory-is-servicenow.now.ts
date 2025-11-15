@@ -54,9 +54,9 @@ export const x_138679_livesecur_advisory_is_servicenow = Table({
     display: 'advisory_id',
     accessibleFrom: 'public',
     callerAccess: 'tracking',
-    actions: ['read', 'update', 'create'],
+    actions: ['read', 'update', 'delete', 'create'],
     allowWebServiceAccess: true,
-    allowClientScripts: true,
-    allowNewFields: true,
-    allowUiActions: true,
+    allowClientScripts: false,
+    allowNewFields: false,
+    allowUiActions: false,
 })

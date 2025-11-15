@@ -4,9 +4,9 @@ import { RestApi } from '@servicenow/sdk/core'
 export const LiveSecurityScannerAPI = RestApi({
     $id: Now.ID['livesecurityscannerapi'],
     name: 'LiveSecurityScannerAPI',
-    serviceId: 'x_138679_livesecur',
+    service_id: 'x_138679_livesecur',
     active: true,
-    shortDescription: 'REST API for LiveSecurityScanner live data operations',
+    short_description: 'REST API for LiveSecurityScanner live data operations',
     routes: [
         {
             $id: Now.ID['inventory_route'],
@@ -14,7 +14,7 @@ export const LiveSecurityScannerAPI = RestApi({
             path: '/inventory',
             method: 'GET',
             script: Now.include('../../server/scripted-rest/inventory-handler.js'),
-            shortDescription: 'Live instance inventory enumeration endpoint',
+            short_description: 'Live instance inventory enumeration endpoint',
             consumes: 'application/json,application/xml,text/xml',
             produces: 'application/json,application/xml,text/xml',
         },
@@ -24,7 +24,7 @@ export const LiveSecurityScannerAPI = RestApi({
             path: '/ingest',
             method: 'POST',
             script: Now.include('../../server/scripted-rest/ingest-handler.js'),
-            shortDescription: 'Live data ingestion from ServiceNow KB and NVD endpoints',
+            short_description: 'Live data ingestion from ServiceNow KB and NVD endpoints',
             consumes: 'application/json,application/xml,text/xml',
             produces: 'application/json,application/xml,text/xml',
         },

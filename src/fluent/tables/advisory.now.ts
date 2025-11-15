@@ -59,7 +59,7 @@ export const x_138679_livesecur_advisory = Table({
     display: 'title',
     accessibleFrom: 'public',
     callerAccess: 'tracking',
-    actions: ['read', 'update', 'create'],
+    actions: ['read', 'update', 'delete', 'create'],
     allowWebServiceAccess: true,
     audit: true,
     index: [
@@ -67,7 +67,7 @@ export const x_138679_livesecur_advisory = Table({
         { name: 'index3', element: 'source', unique: false },
         { name: 'index2', element: 'published_date', unique: false },
     ],
-    allowClientScripts: true,
-    allowNewFields: true,
-    allowUiActions: true,
+    allowClientScripts: false,
+    allowNewFields: false,
+    allowUiActions: false,
 })

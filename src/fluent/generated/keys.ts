@@ -5,13 +5,45 @@ declare global {
         namespace Internal {
             interface Keys extends KeysRegistry {
                 explicit: {
+                    '00645e50475536109669565a516d432a': {
+                        table: 'sys_ui_element'
+                        id: '00645e50475536109669565a516d432a'
+                    }
+                    '0c645e50475536109669565a516d432c': {
+                        table: 'sys_ui_element'
+                        id: '0c645e50475536109669565a516d432c'
+                    }
                     '369ad68047d5b2109669565a516d43f3': {
                         table: 'sys_scope_privilege'
                         id: '369ad68047d5b2109669565a516d43f3'
                     }
+                    '3855e21c83dd721018d4f896feaad3e4': {
+                        table: 'sys_kmf_module_key_policy'
+                        id: '3855e21c83dd721018d4f896feaad3e4'
+                    }
+                    '40645e50475536109669565a516d432c': {
+                        table: 'sys_ui_element'
+                        id: '40645e50475536109669565a516d432c'
+                    }
+                    '44645e50475536109669565a516d4329': {
+                        table: 'sys_ui_element'
+                        id: '44645e50475536109669565a516d4329'
+                    }
                     '7e9a1a8047d5b2109669565a516d430c': {
                         table: 'sys_scope_privilege'
                         id: '7e9a1a8047d5b2109669565a516d430c'
+                    }
+                    '80641e50475536109669565a516d4385': {
+                        table: 'sys_ui_section'
+                        id: '80641e50475536109669565a516d4385'
+                    }
+                    '84645e50475536109669565a516d432b': {
+                        table: 'sys_ui_element'
+                        id: '84645e50475536109669565a516d432b'
+                    }
+                    '88645e50475536109669565a516d4328': {
+                        table: 'sys_ui_element'
+                        id: '88645e50475536109669565a516d4328'
                     }
                     '92d09258471536109669565a516d4303': {
                         table: 'sys_scope_privilege'
@@ -41,6 +73,14 @@ declare global {
                         table: 'sys_module'
                         id: '320b0db7ab2e403ab96c414121ed4884'
                     }
+                    c8645e50475536109669565a516d4326: {
+                        table: 'sys_ui_element'
+                        id: 'c8645e50475536109669565a516d4326'
+                    }
+                    c8645e50475536109669565a516d432a: {
+                        table: 'sys_ui_element'
+                        id: 'c8645e50475536109669565a516d432a'
+                    }
                     d2d0da98471536109669565a516d4366: {
                         table: 'sys_scope_privilege'
                         id: 'd2d0da98471536109669565a516d4366'
@@ -57,6 +97,10 @@ declare global {
                         table: 'sys_script_include'
                         id: '18cca9ac610245ceadd68b11f3c6ec64'
                         deleted: true
+                    }
+                    f038524c4795b2109669565a516d435f: {
+                        table: 'sys_wizard_answer'
+                        id: 'f038524c4795b2109669565a516d435f'
                     }
                     finding_create: {
                         table: 'sys_security_acl'
@@ -207,6 +251,24 @@ declare global {
                     },
                     {
                         table: 'sys_ui_list_element'
+                        id: '005b4e9c47d136109669565a516d436e'
+                        key: {
+                            list_id: {
+                                id: 'cc5b4e9c47d136109669565a516d4344'
+                                key: {
+                                    name: 'x_138679_livesecur_finding'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'risk_score'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
                         id: '0334d650475536109669565a516d433c'
                         key: {
                             list_id: {
@@ -229,6 +291,24 @@ declare global {
                         key: {
                             name: 'x_138679_livesecur_scan_job'
                             element: 'summary'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '045b4e9c47d136109669565a516d436d'
+                        key: {
+                            list_id: {
+                                id: 'cc5b4e9c47d136109669565a516d4344'
+                                key: {
+                                    name: 'x_138679_livesecur_finding'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'priority'
                         }
                     },
                     {
@@ -256,6 +336,24 @@ declare global {
                             name: 'x_138679_livesecur_advisory_is_servicenow'
                             element: 'severity'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '085b4e9c47d136109669565a516d436c'
+                        key: {
+                            list_id: {
+                                id: 'cc5b4e9c47d136109669565a516d4344'
+                                key: {
+                                    name: 'x_138679_livesecur_finding'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'instance_artifact'
                         }
                     },
                     {
@@ -416,6 +514,24 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: '274b4e9c47d136109669565a516d4316'
+                        key: {
+                            list_id: {
+                                id: 'eb4b4a9c47d136109669565a516d4320'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'source'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '2778e01f6c9546a1a6aa5d22af7753d5'
                         key: {
@@ -430,6 +546,24 @@ declare global {
                             name: 'x_138679_livesecur_finding'
                             element: 'advisory_ref'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '2b4b4e9c47d136109669565a516d4315'
+                        key: {
+                            list_id: {
+                                id: 'eb4b4a9c47d136109669565a516d4320'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'raw_payload'
                         }
                     },
                     {
@@ -575,6 +709,24 @@ declare global {
                             name: 'x_138679_livesecur_finding'
                             element: 'priority'
                             value: 'high'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '405b4e9c47d136109669565a516d4346'
+                        key: {
+                            list_id: {
+                                id: 'cc5b4e9c47d136109669565a516d4344'
+                                key: {
+                                    name: 'x_138679_livesecur_finding'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'advisory_ref'
                         }
                     },
                     {
@@ -791,6 +943,24 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: '4c5b4e9c47d136109669565a516d4346'
+                        key: {
+                            list_id: {
+                                id: 'cc5b4e9c47d136109669565a516d4344'
+                                key: {
+                                    name: 'x_138679_livesecur_finding'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'detected_on'
+                        }
+                    },
+                    {
                         table: 'sys_choice'
                         id: '4cb403cbde2f4d608c049f79166de88a'
                         key: {
@@ -949,6 +1119,24 @@ declare global {
                     },
                     {
                         table: 'sys_ui_list_element'
+                        id: '674b4a9c47d136109669565a516d4325'
+                        key: {
+                            list_id: {
+                                id: 'eb4b4a9c47d136109669565a516d4320'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'product_list'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
                         id: '68545a50475536109669565a516d43c3'
                         key: {
                             list_id: {
@@ -971,6 +1159,42 @@ declare global {
                         key: {
                             name: 'x_138679_livesecur_advisory_is_servicenow'
                             element: 'advisory_id'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '6b4b4a9c47d136109669565a516d4323'
+                        key: {
+                            list_id: {
+                                id: 'eb4b4a9c47d136109669565a516d4320'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'advisory_id'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '6b4b4a9c47d136109669565a516d4324'
+                        key: {
+                            list_id: {
+                                id: 'eb4b4a9c47d136109669565a516d4320'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'cve_ids'
                         }
                     },
                     {
@@ -1177,6 +1401,24 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: '845b4e9c47d136109669565a516d436e'
+                        key: {
+                            list_id: {
+                                id: 'cc5b4e9c47d136109669565a516d4344'
+                                key: {
+                                    name: 'x_138679_livesecur_finding'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'status'
+                        }
+                    },
+                    {
                         table: 'sys_ui_list'
                         id: '8524d250475536109669565a516d43ab'
                         key: {
@@ -1220,6 +1462,24 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: '885b4e9c47d136109669565a516d436d'
+                        key: {
+                            list_id: {
+                                id: 'cc5b4e9c47d136109669565a516d4344'
+                                key: {
+                                    name: 'x_138679_livesecur_finding'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'remediation_text'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '899f80facf704799ac99243c54e8342c'
                         key: {
@@ -1243,6 +1503,24 @@ declare global {
                                 }
                             }
                             element: 'cve_ids'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '8c5b4e9c47d136109669565a516d436c'
+                        key: {
+                            list_id: {
+                                id: 'cc5b4e9c47d136109669565a516d4344'
+                                key: {
+                                    name: 'x_138679_livesecur_finding'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'match_confidence'
                         }
                     },
                     {
@@ -1391,6 +1669,24 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: 'a34b4e9c47d136109669565a516d4315'
+                        key: {
+                            list_id: {
+                                id: 'eb4b4a9c47d136109669565a516d4320'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'published_date'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: 'a35784ab5a5c487d97e4007fcd3ee399'
                         key: {
@@ -1408,6 +1704,24 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: 'ab4b4e9c47d136109669565a516d4316'
+                        key: {
+                            list_id: {
+                                id: 'eb4b4a9c47d136109669565a516d4320'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'title'
+                        }
+                    },
+                    {
                         table: 'sys_choice'
                         id: 'ace119e77b69479fb2f200e9826a5a1b'
                         key: {
@@ -1422,6 +1736,24 @@ declare global {
                         key: {
                             name: 'x_138679_livesecur_advisory_is_nvd'
                             element: 'cve_ids'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: 'af4b4e9c47d136109669565a516d4315'
+                        key: {
+                            list_id: {
+                                id: 'eb4b4a9c47d136109669565a516d4320'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'severity'
                         }
                     },
                     {
@@ -1628,6 +1960,24 @@ declare global {
                     },
                     {
                         table: 'sys_ui_list_element'
+                        id: 'c45b4e9c47d136109669565a516d4346'
+                        key: {
+                            list_id: {
+                                id: 'cc5b4e9c47d136109669565a516d4344'
+                                key: {
+                                    name: 'x_138679_livesecur_finding'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'artifact_sys_id'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
                         id: 'c524d250475536109669565a516d43af'
                         key: {
                             list_id: {
@@ -1707,6 +2057,23 @@ declare global {
                             name: 'x_138679_livesecur_advisory_is_nvd'
                             element: 'raw_payload'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list'
+                        id: 'cc5b4e9c47d136109669565a516d4344'
+                        key: {
+                            name: 'x_138679_livesecur_finding'
+                            view: {
+                                id: 'Default view'
+                                key: {
+                                    name: 'NULL'
+                                }
+                            }
+                            sys_domain: 'global'
+                            element: 'NULL'
+                            relationship: 'NULL'
+                            parent: 'NULL'
                         }
                     },
                     {
@@ -1830,6 +2197,13 @@ declare global {
                             name: 'x_138679_livesecur_scan_job'
                             element: 'NULL'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_view'
+                        id: 'Default view'
+                        key: {
+                            name: 'NULL'
                         }
                     },
                     {
@@ -1988,6 +2362,23 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list'
+                        id: 'eb4b4a9c47d136109669565a516d4320'
+                        key: {
+                            name: 'x_138679_livesecur_advisory'
+                            view: {
+                                id: 'Default view'
+                                key: {
+                                    name: 'NULL'
+                                }
+                            }
+                            sys_domain: 'global'
+                            element: 'NULL'
+                            relationship: 'NULL'
+                            parent: 'NULL'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: 'ec3ad09fa3da4548ab5dcf2a9b73a2ce'
                         key: {
@@ -2026,6 +2417,24 @@ declare global {
                         id: 'ef323bb8edee454697eca46c6104e2ad'
                         key: {
                             name: 'x_138679_livesecur_finding'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: 'ef4b4a9c47d136109669565a516d4324'
+                        key: {
+                            list_id: {
+                                id: 'eb4b4a9c47d136109669565a516d4320'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'description'
                         }
                     },
                     {
