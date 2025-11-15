@@ -5,8 +5,8 @@
 export class SecurityService {
     constructor() {
         this.baseUrl = '/api/now/table';
-        this.inventoryApiUrl = '/api/x_138679_livesecur/x_138679_livesecur/inventory';
-        this.ingestApiUrl = '/api/x_138679_livesecur/x_138679_livesecur/ingest';
+        this.inventoryApiUrl = '/api/x_138679_livesecur/x_138679_livesecur/x_138679_livesecur/inventory';
+        this.ingestApiUrl = '/api/x_138679_livesecur/x_138679_livesecur/x_138679_livesecur/ingest';
         this.headers = {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
