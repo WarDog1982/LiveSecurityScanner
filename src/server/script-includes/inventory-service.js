@@ -1,16 +1,19 @@
-import { gs, GlideRecord, GlideDateTime } from '@servicenow/glide';
-
 /**
  * InventoryService - Enumerates instance inventory for security matching
- * @class InventoryService
+ * ServiceNow Script Include - provides inventory enumeration capabilities
  */
-export function InventoryService() {
+var InventoryService = Class.create();
+InventoryService.prototype = {
+    
+    initialize: function() {
+        // Constructor
+    },
     
     /**
      * Enumerate instance inventory including plugins, apps, modules, and properties
      * @returns {Object} JSON object containing counts and arrays of inventory items
      */
-    this.getInventory = function() {
+    getInventory: function() {
         var startTime = new GlideDateTime();
         gs.info('[LSS-INV] Starting inventory enumeration at: ' + startTime.getDisplayValue());
 
@@ -127,5 +130,7 @@ export function InventoryService() {
                 error: error.message
             };
         }
-    };
-}
+    },
+
+    type: 'InventoryService'
+};

@@ -1,6 +1,11 @@
-import { gs } from '@servicenow/glide';
-
-export function findingFlowTrigger(current, previous) {
+/**
+ * Finding Flow Trigger - Creates security tasks when new findings are identified
+ * This script is called by the business rule when new findings are created
+ * 
+ * @param {GlideRecord} current - The current finding record
+ * @param {GlideRecord} previous - The previous finding record (if update)
+ */
+function findingFlowTrigger(current, previous) {
     try {
         gs.info('[LSS-FLOW] Finding Flow Trigger activated for finding: ' + current.getUniqueValue());
         

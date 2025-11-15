@@ -1,10 +1,8 @@
-import { gs } from '@servicenow/glide';
-import { LiveDataIngestionService } from '../script-includes/live-data-ingestion.js';
-
 /**
  * Manual trigger for live data ingestion - can be run from Scripts > Scripts - Background
+ * This provides a simple interface to trigger live data ingestion manually
  */
-export function runLiveDataIngestion() {
+function runLiveDataIngestion() {
     try {
         gs.info('[LSS-MANUAL] Starting manual live data ingestion');
         

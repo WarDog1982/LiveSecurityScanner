@@ -1,14 +1,18 @@
-import { gs, GlideRecord, sn_ws } from '@servicenow/glide';
-
 /**
  * LiveDataIngestionService - Fetches live data from ServiceNow KB and NVD APIs
+ * ServiceNow Script Include - provides live data ingestion capabilities
  */
-export function LiveDataIngestionService() {
+var LiveDataIngestionService = Class.create();
+LiveDataIngestionService.prototype = {
+    
+    initialize: function() {
+        // Constructor
+    },
 
     /**
      * Fetch live ServiceNow security advisories from official KB
      */
-    this.fetchServiceNowAdvisories = function() {
+    fetchServiceNowAdvisories: function() {
         gs.info('[LSS-INGEST] Fetching live ServiceNow security advisories');
         
         try {
@@ -35,12 +39,12 @@ export function LiveDataIngestionService() {
             gs.error('[LSS-INGEST] Error fetching ServiceNow advisories: ' + error.message);
             return { success: false, error: error.message, advisories: [] };
         }
-    };
+    },
 
     /**
      * Fetch live NVD CVE data
      */
-    this.fetchNVDAdvisories = function() {
+    fetchNVDAdvisories: function() {
         gs.info('[LSS-INGEST] Fetching live NVD CVE data');
         
         try {
@@ -80,12 +84,12 @@ export function LiveDataIngestionService() {
             gs.error('[LSS-INGEST] Error fetching NVD advisories: ' + error.message);
             return { success: false, error: error.message, advisories: [] };
         }
-    };
+    },
 
     /**
      * Parse ServiceNow KB response and extract security advisories
      */
-    this.parseServiceNowResponse = function(responseBody) {
+    parseServiceNowResponse: function(responseBody) {
         try {
             // Since ServiceNow KB returns HTML, we need to parse it differently
             // For now, create a simulated response based on known ServiceNow security patterns
@@ -118,12 +122,12 @@ export function LiveDataIngestionService() {
             gs.error('[LSS-INGEST] Error parsing ServiceNow response: ' + error.message);
             return { success: false, error: error.message, advisories: [] };
         }
-    };
+    },
 
     /**
      * Parse NVD CVE response and extract relevant advisories
      */
-    this.parseNVDResponse = function(responseBody) {
+    parseNVDResponse: function(responseBody) {
         try {
             var nvdData = JSON.parse(responseBody);
             var advisories = [];
@@ -160,42 +164,42 @@ export function LiveDataIngestionService() {
             gs.error('[LSS-INGEST] Error parsing NVD response: ' + error.message);
             return { success: false, error: error.message, advisories: [] };
         }
-    };
+    },
 
     /**
      * Extract CVE title/summary
      */
-    this.extractCVETitle = function(cve) {
+    extractCVETitle: function(cve) {
         if (cve.descriptions && cve.descriptions.length > 0) {
             return cve.descriptions[0].value.substring(0, 200); // Truncate long descriptions
         }
         return 'CVE Security Advisory: ' + cve.id;
-    };
+    },
 
     /**
      * Extract CVE description
      */
-    this.extractCVEDescription = function(cve) {
+    extractCVEDescription: function(cve) {
         if (cve.descriptions && cve.descriptions.length > 0) {
             return cve.descriptions[0].value;
         }
         return 'Security vulnerability details for ' + cve.id;
-    };
+    },
 
     /**
      * Extract published date
      */
-    this.extractPublishedDate = function(cve) {
+    extractPublishedDate: function(cve) {
         if (cve.published) {
             return cve.published.split('T')[0]; // Extract just the date part
         }
         return new Date().toISOString().split('T')[0];
-    };
+    },
 
     /**
      * Extract severity level
      */
-    this.extractSeverity = function(cve) {
+    extractSeverity: function(cve) {
         if (cve.metrics && cve.metrics.cvssMetricV31 && cve.metrics.cvssMetricV31.length > 0) {
             var severity = cve.metrics.cvssMetricV31[0].cvssData.baseSeverity;
             return severity ? severity.toLowerCase() : 'medium';
@@ -205,12 +209,12 @@ export function LiveDataIngestionService() {
             return severity ? severity.toLowerCase() : 'medium';
         }
         return 'medium';
-    };
+    },
 
     /**
      * Extract affected products
      */
-    this.extractProductList = function(cve) {
+    extractProductList: function(cve) {
         var products = [];
         
         if (cve.configurations && cve.configurations.length > 0) {
@@ -241,12 +245,12 @@ export function LiveDataIngestionService() {
         }
         
         return products.length > 0 ? JSON.stringify(products) : 'ServiceNow Platform';
-    };
+    },
 
     /**
      * Ingest advisories into the advisory table
      */
-    this.ingestAdvisories = function(advisories) {
+    ingestAdvisories: function(advisories) {
         gs.info('[LSS-INGEST] Ingesting ' + advisories.length + ' advisories into database');
         
         var ingested = 0;
@@ -297,12 +301,12 @@ export function LiveDataIngestionService() {
         
         gs.info('[LSS-INGEST] Ingestion complete. New: ' + ingested + ', Updated: ' + updated);
         return { ingested: ingested, updated: updated };
-    };
+    },
 
     /**
      * Run full live data ingestion from all sources
      */
-    this.runLiveIngestion = function() {
+    runLiveIngestion: function() {
         gs.info('[LSS-INGEST] Starting full live data ingestion');
         
         var results = {
@@ -339,5 +343,7 @@ export function LiveDataIngestionService() {
         
         gs.info('[LSS-INGEST] Live ingestion complete. Total advisories processed: ' + allAdvisories.length);
         return results;
-    };
-}
+    },
+
+    type: 'LiveDataIngestionService'
+};

@@ -1,10 +1,9 @@
-import { gs, GlideRecord, GlideDateTime } from '@servicenow/glide';
-
 /**
  * LiveSecurityScanner - Nightly Ingest and Scan Job
  * Performs automated security advisory ingestion, inventory matching, and enrichment
+ * This script can be run as a scheduled job or manually
  */
-export function nightlySecurityScan() {
+function nightlySecurityScan() {
     var startTime = new GlideDateTime();
     gs.info('[LSS-JOB] Starting nightly security scan at: ' + startTime.getDisplayValue());
     
