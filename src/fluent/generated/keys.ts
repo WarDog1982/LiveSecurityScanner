@@ -29,6 +29,10 @@ declare global {
                         table: 'sys_scope_privilege'
                         id: 'b69ad68047d5b2109669565a516d43fc'
                     }
+                    bb4b4e9c47d136109669565a516d4334: {
+                        table: 'sys_scope_privilege'
+                        id: 'bb4b4e9c47d136109669565a516d4334'
+                    }
                     bom_json: {
                         table: 'sys_module'
                         id: '320b0db7ab2e403ab96c414121ed4884'
@@ -36,6 +40,7 @@ declare global {
                     EnrichmentService: {
                         table: 'sys_script_include'
                         id: '18cca9ac610245ceadd68b11f3c6ec64'
+                        deleted: true
                     }
                     finding_create: {
                         table: 'sys_security_acl'
@@ -76,10 +81,12 @@ declare global {
                     MatcherService: {
                         table: 'sys_script_include'
                         id: 'fd4d084d7daf4546815a30cc31361289'
+                        deleted: true
                     }
                     nightly_security_scan: {
                         table: 'sysscript_schedule'
                         id: '82b7759e0556454885a620df7eb256a0'
+                        deleted: true
                     }
                     package_json: {
                         table: 'sys_module'
@@ -88,14 +95,17 @@ declare global {
                     sample_advisory_1: {
                         table: 'x_138679_livesecur_advisory'
                         id: 'd9ce141ab9fa43bf905520a1ad028fa9'
+                        deleted: true
                     }
                     sample_advisory_2: {
                         table: 'x_138679_livesecur_advisory'
                         id: 'e9a8415282fc46c7929d310fceaa2cc4'
+                        deleted: true
                     }
                     sample_scan_job: {
                         table: 'x_138679_livesecur_scan_job'
                         id: '623b31683a5f489ea3fde3b184a47df7'
+                        deleted: true
                     }
                     scan_job_create: {
                         table: 'sys_security_acl'
@@ -120,6 +130,7 @@ declare global {
                     'src_server_script-includes_enrichment-service_js': {
                         table: 'sys_module'
                         id: '4392cf35d1f94aa2b92daa1d959ab602'
+                        deleted: true
                     }
                     'src_server_script-includes_inventory-service_js': {
                         table: 'sys_module'
@@ -128,6 +139,7 @@ declare global {
                     'src_server_script-includes_matcher-service_js': {
                         table: 'sys_module'
                         id: '8911f674d4414db697dea466f28714bd'
+                        deleted: true
                     }
                     'src_server_scripted-rest_inventory-handler_js': {
                         table: 'sys_module'
