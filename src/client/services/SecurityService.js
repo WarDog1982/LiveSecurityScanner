@@ -5,7 +5,8 @@
 export class SecurityService {
     constructor() {
         this.baseUrl = '/api/now/table';
-        this.inventoryApiUrl = '/api/x_138679_livesecur/inventory';
+        this.inventoryApiUrl = '/api/x_138679_livesecur/x_138679_livesecur/inventory';
+        this.ingestApiUrl = '/api/x_138679_livesecur/x_138679_livesecur/ingest';
         this.headers = {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
@@ -180,7 +181,7 @@ export class SecurityService {
             console.log('Starting live data ingestion from official endpoints...');
             
             // Call the live data ingestion service
-            const response = await fetch('/api/x_138679_livesecur/ingest', {
+            const response = await fetch(this.ingestApiUrl, {
                 method: 'POST',
                 headers: this.headers,
                 body: JSON.stringify({ source: 'all' })
