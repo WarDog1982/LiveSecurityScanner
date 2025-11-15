@@ -5,6 +5,14 @@ declare global {
         namespace Internal {
             interface Keys extends KeysRegistry {
                 explicit: {
+                    '369ad68047d5b2109669565a516d43f3': {
+                        table: 'sys_scope_privilege'
+                        id: '369ad68047d5b2109669565a516d43f3'
+                    }
+                    '7e9a1a8047d5b2109669565a516d430c': {
+                        table: 'sys_scope_privilege'
+                        id: '7e9a1a8047d5b2109669565a516d430c'
+                    }
                     advisory_read: {
                         table: 'sys_security_acl'
                         id: '563220b766e04b42b130f094af2a2ffb'
@@ -12,6 +20,14 @@ declare global {
                     advisory_write: {
                         table: 'sys_security_acl'
                         id: '36c2429916bd4d32a248bee717302696'
+                    }
+                    b69ad68047d5b2109669565a516d43f8: {
+                        table: 'sys_scope_privilege'
+                        id: 'b69ad68047d5b2109669565a516d43f8'
+                    }
+                    b69ad68047d5b2109669565a516d43fc: {
+                        table: 'sys_scope_privilege'
+                        id: 'b69ad68047d5b2109669565a516d43fc'
                     }
                     bom_json: {
                         table: 'sys_module'

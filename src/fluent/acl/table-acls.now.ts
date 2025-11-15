@@ -26,7 +26,7 @@ export const advisory_write_acl = Acl({
     script: `
         var principal = gs.getUserName();
         var decision = gs.hasRole('x_138679_livesecur.admin');
-        gs.log('[LSS-ACL] Advisory write access for user: ' + principal + ', decision: ' + decision, 'LiveSecurityScanner');
+        gs.info('[LSS-ACL] Advisory write access for user: ' + principal + ', decision: ' + decision);
         answer = decision;
     `
 })
