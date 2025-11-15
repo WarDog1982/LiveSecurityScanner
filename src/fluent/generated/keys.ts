@@ -13,6 +13,10 @@ declare global {
                         table: 'sys_scope_privilege'
                         id: '7e9a1a8047d5b2109669565a516d430c'
                     }
+                    '92d09258471536109669565a516d4303': {
+                        table: 'sys_scope_privilege'
+                        id: '92d09258471536109669565a516d4303'
+                    }
                     advisory_read: {
                         table: 'sys_security_acl'
                         id: '563220b766e04b42b130f094af2a2ffb'
@@ -36,6 +40,18 @@ declare global {
                     bom_json: {
                         table: 'sys_module'
                         id: '320b0db7ab2e403ab96c414121ed4884'
+                    }
+                    d2d0da98471536109669565a516d4366: {
+                        table: 'sys_scope_privilege'
+                        id: 'd2d0da98471536109669565a516d4366'
+                    }
+                    d6d0da98471536109669565a516d436a: {
+                        table: 'sys_scope_privilege'
+                        id: 'd6d0da98471536109669565a516d436a'
+                    }
+                    dad0da98471536109669565a516d436e: {
+                        table: 'sys_scope_privilege'
+                        id: 'dad0da98471536109669565a516d436e'
                     }
                     EnrichmentService: {
                         table: 'sys_script_include'
@@ -62,9 +78,14 @@ declare global {
                         table: 'sys_security_acl'
                         id: '7f5dda56d3cb444e9725bc58db274e45'
                     }
+                    ingest_route: {
+                        table: 'sys_ws_operation'
+                        id: '2a78e0dcbe2e4d2a92c0ec78017cce09'
+                    }
                     inventory_api: {
                         table: 'sys_ws_definition'
                         id: 'dd31d92caa43468cbc47a22d0b0d5b64'
+                        deleted: true
                     }
                     inventory_route: {
                         table: 'sys_ws_operation'
@@ -74,9 +95,17 @@ declare global {
                         table: 'sys_script_include'
                         id: 'f5f58353f7514ae8933cbd5516dff7d6'
                     }
+                    LiveDataIngestionService: {
+                        table: 'sys_script_include'
+                        id: 'd2cfbcc11dc049ca8091eaf50f2ff691'
+                    }
                     livesecurity_dashboard: {
                         table: 'sys_ui_page'
                         id: '29be6b6610704e78991466c655c99aae'
+                    }
+                    livesecurityscannerapi: {
+                        table: 'sys_ws_definition'
+                        id: '66fd5e671d024c849a2f5806219eefbd'
                     }
                     MatcherService: {
                         table: 'sys_script_include'
@@ -136,10 +165,22 @@ declare global {
                         table: 'sys_module'
                         id: 'cbb3366462494bef92b3ac8e3e02fc96'
                     }
+                    'src_server_script-includes_live-data-ingestion_js': {
+                        table: 'sys_module'
+                        id: '7beb13d997cf4ee9aba9eb244c54b397'
+                    }
+                    'src_server_script-includes_manual-ingestion_js': {
+                        table: 'sys_module'
+                        id: '0acdff69e6f34f4ea4d584d38d35d84a'
+                    }
                     'src_server_script-includes_matcher-service_js': {
                         table: 'sys_module'
                         id: '8911f674d4414db697dea466f28714bd'
                         deleted: true
+                    }
+                    'src_server_scripted-rest_ingest-handler_js': {
+                        table: 'sys_module'
+                        id: 'e024fbc5fe05484c96d7dccd62052a04'
                     }
                     'src_server_scripted-rest_inventory-handler_js': {
                         table: 'sys_module'
@@ -165,11 +206,47 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: '0334d650475536109669565a516d433c'
+                        key: {
+                            list_id: {
+                                id: '8334d650475536109669565a516d433a'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory_is_servicenow'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'description'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '0350167371c246a1b0bbcd79c6dd633e'
                         key: {
                             name: 'x_138679_livesecur_scan_job'
                             element: 'summary'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '0734d650475536109669565a516d433b'
+                        key: {
+                            list_id: {
+                                id: '8334d650475536109669565a516d433a'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory_is_servicenow'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'advisory_id'
                         }
                     },
                     {
@@ -179,6 +256,50 @@ declare global {
                             name: 'x_138679_livesecur_advisory_is_servicenow'
                             element: 'severity'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_index'
+                        id: '0867baa7e6be4f0aa4ba4a372ed8fd9a'
+                        key: {
+                            logical_table_name: 'x_138679_livesecur_scan_job'
+                            col_name_string: 'scheduled_by'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '0b34d650475536109669565a516d433d'
+                        key: {
+                            list_id: {
+                                id: '8334d650475536109669565a516d433a'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory_is_servicenow'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'published_date'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '0f34d650475536109669565a516d433c'
+                        key: {
+                            list_id: {
+                                id: '8334d650475536109669565a516d433a'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory_is_servicenow'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'import_state'
                         }
                     },
                     {
@@ -245,6 +366,14 @@ declare global {
                         key: {
                             name: 'x_138679_livesecur_sec_task'
                             element: 'finding_ref'
+                        }
+                    },
+                    {
+                        table: 'sys_index'
+                        id: '1ecc81906de842819f755f09758c6d9a'
+                        key: {
+                            logical_table_name: 'x_138679_livesecur_finding'
+                            col_name_string: 'advisory_ref'
                         }
                     },
                     {
@@ -449,6 +578,42 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: '4124d250475536109669565a516d43ad'
+                        key: {
+                            list_id: {
+                                id: '8524d250475536109669565a516d43ab'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory_is_nvd'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'advisory_id'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '4124d250475536109669565a516d43af'
+                        key: {
+                            list_id: {
+                                id: '8524d250475536109669565a516d43ab'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory_is_nvd'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'import_state'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '418a87f2b09246b0af167ba7035ecfb1'
                         key: {
@@ -491,6 +656,24 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: '4524d250475536109669565a516d43ae'
+                        key: {
+                            list_id: {
+                                id: '8524d250475536109669565a516d43ab'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory_is_nvd'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'description'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '455a6de89298495cbcb1506cefed64cc'
                         key: {
@@ -530,6 +713,24 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: '47345a50475536109669565a516d4323'
+                        key: {
+                            list_id: {
+                                id: '8334d650475536109669565a516d433a'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory_is_servicenow'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'severity'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '47ccb2e4477542a1833c7d87329a30b3'
                         key: {
@@ -543,6 +744,24 @@ declare global {
                         key: {
                             name: 'x_138679_livesecur_advisory_is_nvd'
                             element: 'raw_payload'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '4924d250475536109669565a516d43b0'
+                        key: {
+                            list_id: {
+                                id: '8524d250475536109669565a516d43ab'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory_is_nvd'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'severity'
                         }
                     },
                     {
@@ -578,6 +797,24 @@ declare global {
                             name: 'x_138679_livesecur_scan_job'
                             element: 'job_status'
                             value: 'partial'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '4d24d250475536109669565a516d43af'
+                        key: {
+                            list_id: {
+                                id: '8524d250475536109669565a516d43ab'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory_is_nvd'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'published_date'
                         }
                     },
                     {
@@ -679,6 +916,23 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list'
+                        id: '64545a50475536109669565a516d43c1'
+                        key: {
+                            name: 'x_138679_livesecur_scan_job'
+                            view: {
+                                id: 'Default view'
+                                key: {
+                                    name: 'NULL'
+                                }
+                            }
+                            sys_domain: 'global'
+                            element: 'NULL'
+                            relationship: 'NULL'
+                            parent: 'NULL'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '65209b53fcd14749a777263007e3b504'
                         key: {
@@ -694,11 +948,47 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: '68545a50475536109669565a516d43c3'
+                        key: {
+                            list_id: {
+                                id: '64545a50475536109669565a516d43c1'
+                                key: {
+                                    name: 'x_138679_livesecur_scan_job'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'started_at'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '690d81d90c9a43b7a029d0d435d27885'
                         key: {
                             name: 'x_138679_livesecur_advisory_is_servicenow'
                             element: 'advisory_id'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '6c545a50475536109669565a516d43c2'
+                        key: {
+                            list_id: {
+                                id: '64545a50475536109669565a516d43c1'
+                                key: {
+                                    name: 'x_138679_livesecur_scan_job'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'job_status'
                         }
                     },
                     {
@@ -852,10 +1142,80 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list'
+                        id: '8334d650475536109669565a516d433a'
+                        key: {
+                            name: 'x_138679_livesecur_advisory_is_servicenow'
+                            view: {
+                                id: 'Default view'
+                                key: {
+                                    name: 'NULL'
+                                }
+                            }
+                            sys_domain: 'global'
+                            element: 'NULL'
+                            relationship: 'NULL'
+                            parent: 'NULL'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '8334d650475536109669565a516d433d'
+                        key: {
+                            list_id: {
+                                id: '8334d650475536109669565a516d433a'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory_is_servicenow'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'product_list'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list'
+                        id: '8524d250475536109669565a516d43ab'
+                        key: {
+                            name: 'x_138679_livesecur_advisory_is_nvd'
+                            view: {
+                                id: 'Default view'
+                                key: {
+                                    name: 'NULL'
+                                }
+                            }
+                            sys_domain: 'global'
+                            element: 'NULL'
+                            relationship: 'NULL'
+                            parent: 'NULL'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '8560c4e651c14928b62a822f83bd17ec'
                         key: {
                             name: 'x_138679_livesecur_advisory_is_nvd'
+                            element: 'error_message'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '8734d650475536109669565a516d433c'
+                        key: {
+                            list_id: {
+                                id: '8334d650475536109669565a516d433a'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory_is_servicenow'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
                             element: 'error_message'
                         }
                     },
@@ -865,6 +1225,24 @@ declare global {
                         key: {
                             name: 'x_138679_livesecur_advisory'
                             element: 'description'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '8b34d650475536109669565a516d433b'
+                        key: {
+                            list_id: {
+                                id: '8334d650475536109669565a516d433a'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory_is_servicenow'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'cve_ids'
                         }
                     },
                     {
@@ -883,6 +1261,24 @@ declare global {
                             name: 'x_138679_livesecur_finding'
                             element: 'status'
                             value: 'remediated'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '8f34d650475536109669565a516d433d'
+                        key: {
+                            list_id: {
+                                id: '8334d650475536109669565a516d433a'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory_is_servicenow'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'raw_payload'
                         }
                     },
                     {
@@ -1180,6 +1576,24 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: 'c124d250475536109669565a516d43b0'
+                        key: {
+                            list_id: {
+                                id: '8524d250475536109669565a516d43ab'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory_is_nvd'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'raw_payload'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: 'c31864f68cfd4c04b2080555f6484fc4'
                         key: {
@@ -1213,6 +1627,24 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: 'c524d250475536109669565a516d43af'
+                        key: {
+                            list_id: {
+                                id: '8524d250475536109669565a516d43ab'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory_is_nvd'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'product_list'
+                        }
+                    },
+                    {
                         table: 'ua_table_licensing_config'
                         id: 'c87c1b2801d04502aa54465771d0f78b'
                         key: {
@@ -1233,12 +1665,84 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: 'c924d250475536109669565a516d43ae'
+                        key: {
+                            list_id: {
+                                id: '8524d250475536109669565a516d43ab'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory_is_nvd'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'error_message'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: 'cb345a50475536109669565a516d4323'
+                        key: {
+                            list_id: {
+                                id: '8334d650475536109669565a516d433a'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory_is_servicenow'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'source'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: 'cb3753623ab946fa885f2595f34befe6'
                         key: {
                             name: 'x_138679_livesecur_advisory_is_nvd'
                             element: 'raw_payload'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: 'cd24d250475536109669565a516d43ad'
+                        key: {
+                            list_id: {
+                                id: '8524d250475536109669565a516d43ab'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory_is_nvd'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'cve_ids'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: 'cd24d250475536109669565a516d43b0'
+                        key: {
+                            list_id: {
+                                id: '8524d250475536109669565a516d43ab'
+                                key: {
+                                    name: 'x_138679_livesecur_advisory_is_nvd'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'source'
                         }
                     },
                     {
@@ -1329,6 +1833,24 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: 'e0545a50475536109669565a516d43c3'
+                        key: {
+                            list_id: {
+                                id: '64545a50475536109669565a516d43c1'
+                                key: {
+                                    name: 'x_138679_livesecur_scan_job'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'scheduled_by'
+                        }
+                    },
+                    {
                         table: 'sys_security_acl_role'
                         id: 'e09fddd50ae940beb8eb89fb0df54c5d'
                         key: {
@@ -1399,6 +1921,24 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: 'e4545a50475536109669565a516d43c2'
+                        key: {
+                            list_id: {
+                                id: '64545a50475536109669565a516d43c1'
+                                key: {
+                                    name: 'x_138679_livesecur_scan_job'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'finished_at'
+                        }
+                    },
+                    {
                         table: 'sys_choice'
                         id: 'e4ab3f7afeb14886a4edd2282c90b108'
                         key: {
@@ -1453,6 +1993,24 @@ declare global {
                         key: {
                             name: 'x_138679_livesecur_advisory_is_nvd'
                             element: 'advisory_id'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: 'ec545a50475536109669565a516d43c3'
+                        key: {
+                            list_id: {
+                                id: '64545a50475536109669565a516d43c1'
+                                key: {
+                                    name: 'x_138679_livesecur_scan_job'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'summary'
                         }
                     },
                     {

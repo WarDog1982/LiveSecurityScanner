@@ -8,13 +8,18 @@ export const x_138679_livesecur_sec_task = Table({
     schema: {
         finding_ref: ReferenceColumn({
             label: 'Security Finding',
-            referenceTable: 'x_138679_livesecur_finding'
-        })
+            referenceTable: 'x_138679_livesecur_finding',
+            attributes: {
+                encode_utf8: false,
+            },
+        }),
     },
-    display: 'short_description',
-    accessible_from: 'public',
-    caller_access: 'tracking',
-    actions: ['create', 'read', 'update', 'delete'],
-    allow_web_service_access: true,
-    audit: true
+    accessibleFrom: 'public',
+    callerAccess: 'tracking',
+    actions: ['read', 'update', 'create'],
+    allowWebServiceAccess: true,
+    audit: true,
+    allowClientScripts: true,
+    allowNewFields: true,
+    allowUiActions: true,
 })
